@@ -1,0 +1,27 @@
+[package]
+name = "divoom-pixoo-controller"
+version = "0.1.0"
+edition = "2021"
+description = "Control a Divoom Pixoo (16x16) over Bluetooth Classic (RFCOMM) from Linux"
+license = "MIT"
+repository = "https://github.com/RincewindWizzard/divoom-pixoo-controller"
+readme = "README.md"
+
+[lib]
+name = "pixoo"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pixoo"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+clap = { version = "4", features = ["derive", "env"] }
+image = { version = "0.25", default-features = false, features = ["png", "gif", "jpeg"] }
+libc = "0.2"
+
+[profile.release]
+lto = true
+strip = true

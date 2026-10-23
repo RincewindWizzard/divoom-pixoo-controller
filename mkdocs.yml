@@ -1,0 +1,46 @@
+site_name: Divoom Pixoo Controller
+site_description: Rust client and Bluetooth protocol documentation for the Divoom Pixoo
+site_url: https://rincewindwizzard.github.io/divoom-pixoo-controller/
+repo_url: https://github.com/RincewindWizzard/divoom-pixoo-controller
+repo_name: RincewindWizzard/divoom-pixoo-controller
+
+theme:
+  name: material
+  language: de
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Dunkelmodus
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Hellmodus
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight
+
+nav:
+  - Start: index.md
+  - Einrichtung (Linux): setup.md
+  - Benutzung (CLI): usage.md
+  - Rust-Bibliothek: library.md
+  - Protokoll:
+      - Überblick: protocol/overview.md
+      - Befehlsreferenz: protocol/commands.md
+      - Bilder und Animationen: protocol/images.md
+      - Kanäle (Views): protocol/channels.md
+      - Tools, Alarm und Sonstiges: protocol/tools.md
+      - Antworten des Geräts: protocol/responses.md
+      - Gerätevarianten: protocol/variants.md
+  - Entwicklung und Release: development.md
+  - Quellen: references.md
